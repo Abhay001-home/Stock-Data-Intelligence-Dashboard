@@ -1,6 +1,6 @@
 # 📈 Stock Data Intelligence Dashboard
 
-> Jarnox Internship Assignment — Built with FastAPI + yfinance + Chart.js
+> Built with FastAPI + yfinance + Chart.js
 
 A full-stack mini financial data platform that collects real NSE stock data, exposes REST APIs, and visualises insights in a clean dark-themed dashboard.
 
@@ -41,7 +41,7 @@ _(Add your Render/Heroku URL here after deployment)_
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/YOUR_USERNAME/stock-dashboard.git
+git clone https://github.com/Abhay001-home/Stock-Data-Intelligence-Dashboard.git
 cd stock-dashboard
 ```
 
@@ -131,4 +131,4 @@ stock-dashboard/
 ---
 
 ## 👤 Author
-Built as part of the Jarnox Software Internship Assignment.
+Abhay Kumar Verma
