@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Stock Intelligence Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+  
+  <div id="loading"><span>⏳ Fetching data…</span></div>
+  
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <h2>📈 Companies</h2>
+    <div id="company-list"></div>
+    <div id="movers">
+      <h3>🔥 Today's Movers</h3>
+      <div id="movers-list"><span style="color:var(--muted);font-size:11px">Loading…</span></div>
+    </div>
+  </nav>
+  
+  <!-- Main -->
+  <div id="main">
+    <div id="header">
+      <div>
+        <div id="stock-title" style="font-size:18px;font-weight:700">Stock Intelligence Dashboard</div>
+        <div class="sub" id="stock-sub">Select a company from the sidebar</div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:6px" id="range-btns">
+        <button class="range-btn active" data-days="30">30D</button>
+        <button class="range-btn" data-days="60">60D</button>
+        <button class="range-btn" data-days="90">90D</button>
+        <button class="range-btn" data-days="180">180D</button>
+      </div>
+    </div>
+    
+    <div id="content">
+      <div id="placeholder">👈 Select a company to view its data</div>
+      
+      <!-- Hidden until data loads -->
+      <div id="dashboard" style="display:none;flex-direction:column;gap:20px">
+        <div class="cards" id="metric-cards"></div>
+        <div class="chart-panel">
+          <h3>Closing Price &amp; Moving Averages</h3>
+          <div class="chart-wrap"><canvas id="priceChart"></canvas></div>
+        </div>
+        <div class="chart-panel">
+          <h3>Daily Return % (Bar)</h3>
+          <div class="chart-wrap"><canvas id="returnChart"></canvas></div>
+        </div>
+        <div class="chart-panel">
+          <h3>14-Day Rolling Volatility</h3>
+          <div class="chart-wrap"><canvas id="volChart"></canvas></div>
+        </div>
+        
+        <!-- Compare panel -->
+        <div id="compare-bar">
+          <label>Compare with:</label>
+          <select id="cmp-sym2"></select>
+          <label>Days:</label>
+          <select id="cmp-days">
+            <option value="30">30</option>
+            <option value="60">60</option>
+            <option value="90" selected>90</option>
+            <option value="180">180</option>
+          </select>
+          <button id="compare-btn">Compare →</button>
+          <span id="corr-badge"></span>
+        </div>
+        <div class="chart-panel" id="compare-panel" style="display:none">
+          <h3 id="compare-title">Comparison</h3>
+          <div class="chart-wrap"><canvas id="compareChart"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+<script src="/static/index.js"></script>
+</html>
