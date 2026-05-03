@@ -120,13 +120,10 @@ stock-dashboard/
 
 ---
 
-## ☁️ Deployment (Render)
+## ☁️ Deployment (Vercel)
 
-1. Push code to GitHub
-2. Go to https://render.com → New Web Service
-3. Connect your GitHub repo
-4. Set **Start Command:** `uvicorn main:app --host 0.0.0.0 --port $PORT`
-5. Deploy 🎉
+ Go to https://stock-data-intelligence-dashboard-lovat.vercel.app/
+ Deployed 🎉
 
 ---
 
