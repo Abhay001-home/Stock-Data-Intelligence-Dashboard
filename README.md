@@ -122,9 +122,16 @@ stock-dashboard/
 
 ## ☁️ Deployment (Vercel)
 
- Go to https://stock-data-intelligence-dashboard-lovat.vercel.app/
- Deployed 🎉
-
+```
+1. If you want to view it locally run this on terminal:
+    python -m venv venv
+    source venv/bin/activate       # Windows: venv\Scripts\activate
+    pip install -r requirements.txt
+    uvicorn main:app --reload 
+2. Execute one by one
+3. Go to https://stock-data-intelligence-dashboard-lovat.vercel.app/
+4. Deployed 🎉
+```
 ---
 
 ## 👤 Author
